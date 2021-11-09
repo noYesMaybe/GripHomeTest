@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/pokemon_detail_fragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/text_margin">
+
+        <TextView
+            android:id="@+id/txtAboutTitle"
+            style="@style/DetailTitleTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/title_about" />
+
+        <TextView
+            android:id="@+id/txtAboutDetails"
+            style="@style/DetailTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtAboutTitle"
+            android:layout_marginTop="20dp" />
+
+        <TextView
+            android:id="@+id/txtBaseStatTitle"
+            style="@style/DetailTitleTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtAboutDetails"
+            android:layout_marginTop="20dp"
+            android:text="@string/title_base_stat" />
+
+        <TextView
+            android:id="@+id/txtBaseStatDetails"
+            style="@style/DetailTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtBaseStatTitle"
+            android:layout_marginTop="20dp" />
+
+        <TextView
+            android:id="@+id/txtImagesTitle"
+            style="@style/DetailTitleTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtBaseStatDetails"
+            android:layout_marginTop="20dp"
+            android:text="@string/title_images" />
+
+
+        <LinearLayout
+            android:id="@+id/imageListContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/txtImagesTitle"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/imageList"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+            <ProgressBar
+                android:id="@+id/loadingBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"/>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+</androidx.core.widget.NestedScrollView>

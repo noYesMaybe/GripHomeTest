@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Grip home test</string>
+
+    <string name="welcome">Welcome to the Grip take-home test</string>
+    <string name="welcome_subject">Subject: Pokemon application</string>
+    <string name="btn_proceed">Proceed</string>
+
+    <string name="title_pick_pokemon">Pick your Pokemon</string>
+
+    <string name="title_about">About</string>
+    <string name="title_base_stat">Base stat</string>
+    <string name="title_images">Images</string>
+
+
+</resources>
